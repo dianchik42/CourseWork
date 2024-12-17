@@ -1,0 +1,16 @@
+﻿<Window x:Class="CourseWork.Views.RequestsView.DepartmentHeadsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Views.RequestsView"
+        mc:Ignorable="d"
+        Title="Руководители отделов" Height="450" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Перечень руководителей отделов" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+            <ListBox x:Name="HeadsListBox" Width="350" Height="300"/>
+            <Button Content="Закрыть" Width="100" HorizontalAlignment="Center" Margin="0,10,0,0" Click="CloseWindow"/>
+        </StackPanel>
+    </Grid>
+</Window>

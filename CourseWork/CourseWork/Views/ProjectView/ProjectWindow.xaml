@@ -1,0 +1,28 @@
+﻿<Window x:Class="CourseWork.Views.ProjectView.ProjectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Views.ProjectView"
+        mc:Ignorable="d"
+        Title="Проекты" Height="500" Width="800">
+    <Grid>
+        <DataGrid x:Name="ProjectDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="350" Margin="10" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ProjectId}" Width="50"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="150"/>
+                <DataGridTextColumn Header="Дата начала" Binding="{Binding StartDate, StringFormat=\{0:dd.MM.yyyy\}}" Width="100"/>
+                <DataGridTextColumn Header="Дата окончания" Binding="{Binding EndDate, StringFormat=\{0:dd.MM.yyyy\}}" Width="100"/>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding Cost}" Width="100"/>
+                <DataGridTextColumn Header="Руководитель" Binding="{Binding Manager}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10">
+            <Button Content="Добавить" Width="80" Height="30" Margin="0,0,10,0" Click="AddProject"/>
+            <Button Content="Изменить" Width="80" Height="30" Margin="0,0,10,0" Click="EditProject"/>
+            <Button Content="Удалить" Width="80" Height="30" Margin="0,0,10,0" Click="DeleteProject"/>
+            <Button Content="Сохранить" Width="80" Height="30" Click="SaveProjects"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="CourseWork.Views.RequestsView.EquipmentEfficiencyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Views.RequestsView"
+        mc:Ignorable="d"
+        Title="Эффективность использования оборудования" Height="550" Width="600">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Сведения об эффективности использования оборудования" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <!-- Список оборудования -->
+            <TextBlock Text="Оборудование:" FontSize="14" FontWeight="Bold" Margin="0,10,0,10"/>
+            <ListBox x:Name="EquipmentListBox" Width="550" Height="350"/>
+
+            <!-- Кнопка закрытия -->
+            <Button Content="Закрыть" Width="100" HorizontalAlignment="Center" Margin="0,20,0,0" Click="CloseWindow"/>
+        </StackPanel>
+    </Grid>
+</Window>

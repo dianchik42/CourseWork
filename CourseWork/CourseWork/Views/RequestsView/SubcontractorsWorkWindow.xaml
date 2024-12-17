@@ -1,0 +1,28 @@
+﻿<Window x:Class="CourseWork.Views.RequestsView.SubcontractorsWorkWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Views.RequestsView"
+        mc:Ignorable="d"
+        Title="Работы субподрядчиков" Height="600" Width="600">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Сведения о работах субподрядчиков" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <!-- Список субподрядчиков -->
+            <TextBlock Text="Субподрядчики:" FontSize="14" FontWeight="Bold" Margin="0,10,0,10"/>
+            <ListBox x:Name="SubcontractorListBox" Width="550" Height="150" SelectionChanged="OnSubcontractorSelected"/>
+
+            <!-- Список работ -->
+            <TextBlock Text="Работы:" FontSize="14" FontWeight="Bold" Margin="0,20,0,10"/>
+            <ListBox x:Name="WorkListBox" Width="550" Height="150"/>
+
+            <!-- Общая стоимость -->
+            <TextBlock x:Name="TotalCostTextBlock" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,10"/>
+
+            <!-- Кнопка закрытия -->
+            <Button Content="Закрыть" Width="100" HorizontalAlignment="Center" Click="CloseWindow"/>
+        </StackPanel>
+    </Grid>
+</Window>

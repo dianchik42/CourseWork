@@ -1,0 +1,26 @@
+﻿<Window x:Class="CourseWork.Views.ContractView.ContractWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Views.ContractView"
+        mc:Ignorable="d"
+        Title="Договоры" Height="400" Width="700">
+    <Grid>
+        <DataGrid x:Name="ContractDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="300" Margin="10" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ContractId}" Width="50"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding ClientName}" Width="150"/>
+                <DataGridTextColumn Header="Общая стоимость" Binding="{Binding TotalCost}" Width="100"/>
+                <DataGridTextColumn Header="Менеджер" Binding="{Binding Manager}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10">
+            <Button Content="Добавить" Width="80" Height="30" Margin="0,0,10,0" Click="AddContract"/>
+            <Button Content="Изменить" Width="80" Height="30" Margin="0,0,10,0" Click="EditContract"/>
+            <Button Content="Удалить" Width="80" Height="30" Margin="0,0,10,0" Click="DeleteContract"/>
+            <Button Content="Сохранить" Width="80" Height="30" Click="SaveContracts"/>
+        </StackPanel>
+    </Grid>
+</Window>

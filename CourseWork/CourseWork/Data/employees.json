@@ -1,0 +1,46 @@
+[
+  {
+    "Id": 1,
+    "Name": "Новое имя",
+    "Department": "Отдел продаж",
+    "Role": "Роль",
+    "Age": 25,
+    "AuthorshipCount": null,
+    "Equipment": null,
+    "IsProjectManager": false,
+    "IsContractManager": false
+  },
+  {
+    "Id": 2,
+    "Name": "Петр",
+    "Department": "Отдел продаж",
+    "Role": "Сотрудник",
+    "Age": 11,
+    "AuthorshipCount": null,
+    "Equipment": null,
+    "IsProjectManager": false,
+    "IsContractManager": false
+  },
+  {
+    "Id": 3,
+    "Name": "Олег Олегович",
+    "Department": "Отдел продаж",
+    "Role": "Менеджер",
+    "Age": 34,
+    "AuthorshipCount": null,
+    "Equipment": null,
+    "IsProjectManager": false,
+    "IsContractManager": false
+  },
+  {
+    "Id": 4,
+    "Name": "Иванов Иван Иванович",
+    "Department": "Отдел разработки",
+    "Role": "Менеджер",
+    "Age": 45,
+    "AuthorshipCount": null,
+    "Equipment": null,
+    "IsProjectManager": false,
+    "IsContractManager": false
+  }
+]

@@ -1,0 +1,24 @@
+﻿<Window x:Class="CourseWork.Views.DepartmentView.DepartmentEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Views.DepartmentView"
+        mc:Ignorable="d"
+        Title="Редактирование отдела" Height="250" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <Label Content="Название отдела:"/>
+            <TextBox x:Name="DepartmentNameTextBox" Width="200"/>
+
+            <Label Content="Руководитель:"/>
+            <ComboBox x:Name="HeadComboBox" Width="200" DisplayMemberPath="Name" IsEditable="True"
+                      Text="Не назначен"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button Content="Сохранить" Width="80" Margin="10" Click="SaveButton_Click"/>
+                <Button Content="Отмена" Width="80" Margin="10" Click="CancelButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

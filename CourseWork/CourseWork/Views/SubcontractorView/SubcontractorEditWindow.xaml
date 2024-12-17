@@ -1,0 +1,25 @@
+﻿<Window x:Class="CourseWork.Views.SubcontractorView.SubcontractorEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Views.SubcontractorView"
+        mc:Ignorable="d"
+        Title="Редактирование подрядчика" Height="500" Width="450">
+    <Grid Margin="10">
+        <StackPanel>
+            <Label Content="Название подрядчика:"/>
+            <TextBox x:Name="NameTextBox" Width="300"/>
+
+            <Label Content="Работы подрядчика:"/>
+            <ListBox x:Name="WorkDetailsListBox" Width="300" Height="100" DisplayMemberPath="Description"/>
+            <Button Content="Добавить работу" Width="150" Margin="0,5,0,0" Click="AddWorkDetail_Click"/>
+            <Button Content="Удалить работу" Width="150" Margin="0,5,0,0" Click="RemoveWorkDetail_Click"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button Content="Сохранить" Width="80" Margin="10" Click="SaveButton_Click"/>
+                <Button Content="Отмена" Width="80" Margin="10" Click="CancelButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

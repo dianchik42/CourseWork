@@ -1,0 +1,25 @@
+﻿<Window x:Class="CourseWork.Views.EmployeeView.EmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Views.EmployeeView"
+        mc:Ignorable="d"
+        Title="Сотрудники" Height="400" Width="700">
+    <Grid>
+        <DataGrid x:Name="EmployeeDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="300" Margin="10" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="150"/>
+                <DataGridTextColumn Header="Отдел" Binding="{Binding Department}" Width="100"/>
+                <DataGridTextColumn Header="Роль" Binding="{Binding Role}" Width="100"/>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding Age}" Width="70"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <Button Content="Добавить" Width="80" Height="30" Margin="10,320,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="AddEmployee"/>
+        <Button Content="Изменить" Width="80" Height="30" Margin="100,320,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="EditEmployee"/>
+        <Button Content="Удалить" Width="80" Height="30" Margin="190,320,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="DeleteEmployee"/>
+        <Button Content="Сохранить" Width="80" Height="30" Margin="280,320,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="SaveEmployees"/>
+    </Grid>
+</Window>
