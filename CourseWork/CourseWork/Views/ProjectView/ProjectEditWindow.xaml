@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseWork.Views.ProjectView"
         mc:Ignorable="d"
-         Title="Редактирование проекта" Height="850" Width="450">
+         Title="Редактирование проекта" Height="900" Width="450">
     <Grid Margin="10">
         <StackPanel>
             <Label Content="Название проекта:"/>

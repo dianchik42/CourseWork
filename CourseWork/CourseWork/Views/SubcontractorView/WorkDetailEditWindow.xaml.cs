@@ -49,8 +49,18 @@ namespace CourseWork.Views.SubcontractorView
 		private void SaveButton_Click(object sender, RoutedEventArgs e)
 		{
 			SubcontractedWork.Description = DescriptionTextBox.Text;
-			SubcontractedWork.Cost = decimal.TryParse(CostTextBox.Text, out var cost) ? cost : 0;
-			if (ProjectComboBox.SelectedItem is Project selectedProject)
+
+            // Проверка стоимости
+            if (decimal.TryParse(CostTextBox.Text, out var cost) && cost >= 0)
+            {
+                SubcontractedWork.Cost = cost;
+            }
+            else
+            {
+                MessageBox.Show("Введите корректное значение для стоимости (положительное число).", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (ProjectComboBox.SelectedItem is Project selectedProject)
 			{
 				SubcontractedWork.ProjectId = selectedProject.ProjectId;
 			}
